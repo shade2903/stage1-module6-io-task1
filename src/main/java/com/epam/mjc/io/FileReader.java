@@ -12,7 +12,7 @@ public class FileReader {
         try(BufferedReader reader = new BufferedReader(new java.io.FileReader(file));) {
             profile = getValueFromLine(reader);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            throw new MyCustomRuntimeException("File not found!");
         }
         return profile;
     }
