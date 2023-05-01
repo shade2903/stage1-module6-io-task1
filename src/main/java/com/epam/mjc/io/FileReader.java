@@ -36,6 +36,8 @@ public class FileReader {
                 case ("Phone"):
                     profile.setPhone(Long.parseLong(value));
                     break;
+                default:
+                    System.out.println("Line is not valid!");
             }
         }
         return profile;
